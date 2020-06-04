@@ -23,6 +23,9 @@ Blockly.Blocks['each-of'] = {
       }
       childCount = this.childBlocks_.length;
     });
+  },
+  onchange: function() {
+    fieldNameCheck(this);
   }
 };
 
@@ -36,7 +39,73 @@ Blockly.Blocks['nicht-sondern'] = {
     this.setOutput(true, 'score');
     this.setColour(160);
     this.setTooltip('Returns a score');
-    this.setHelpUrl('http://www.w3schools.com/jsref/jsref_length_string.asp');
+    //this.setHelpUrl('http://www.w3schools.com/jsref/jsref_length_string.asp');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
 
+Blockly.Blocks['soleil'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('sun')
+      .appendField(new Blockly.FieldImage("../media/words/soleil.png", 30, 30, "*"))
+    //this.setPreviousStatement(true, 'Field');
+    this.setOutput(true, 'score');
+    this.setNextStatement(false, 'Field');
+    this.setColour(160);
+    this.setTooltip('This is a score');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['cloud'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('sun')
+      .appendField(new Blockly.FieldImage("../media/words/cloud.png", 30, 30, "*"))
+    //this.setPreviousStatement(true, 'Field');
+    this.setOutput(true, 'score');
+    this.setNextStatement(false, 'Field');
+    this.setColour(160);
+    this.setTooltip('This is a score');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['rain'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('sun')
+      .appendField(new Blockly.FieldImage("../media/words/rain.png", 30, 30, "*"))
+    //this.setPreviousStatement(true, 'Field');
+    this.setOutput(true, 'score');
+    this.setNextStatement(false, 'Field');
+    this.setColour(160);
+    this.setTooltip('This is a score');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['thunder'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('sun')
+      .appendField(new Blockly.FieldImage("../media/words/thunder.png", 30, 30, "*"))
+    //this.setPreviousStatement(true, 'Field');
+    this.setOutput(true, 'score');
+    this.setNextStatement(false, 'Field');
+    this.setColour(160);
+    this.setTooltip('This is a score');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
   }
 };
