@@ -49,7 +49,7 @@ Blockly.Blocks['nicht-sondern'] = {
 Blockly.Blocks['soleil'] = {
   // Numeric input.
   init: function() {
-    this.appendDummyInput('sun')
+    this.appendDummyInput('soleil')
       .appendField(new Blockly.FieldImage("../media/words/soleil.png", 30, 30, "*"))
     //this.setPreviousStatement(true, 'Field');
     this.setOutput(true, 'score');
@@ -62,11 +62,11 @@ Blockly.Blocks['soleil'] = {
   }
 };
 
-Blockly.Blocks['cloud'] = {
+Blockly.Blocks['nuage'] = {
   // Numeric input.
   init: function() {
-    this.appendDummyInput('sun')
-      .appendField(new Blockly.FieldImage("../media/words/cloud.png", 30, 30, "*"))
+    this.appendDummyInput('nuage')
+      .appendField(new Blockly.FieldImage("../media/words/nuage.png", 30, 30, "*"))
     //this.setPreviousStatement(true, 'Field');
     this.setOutput(true, 'score');
     this.setNextStatement(false, 'Field');
@@ -78,11 +78,11 @@ Blockly.Blocks['cloud'] = {
   }
 };
 
-Blockly.Blocks['rain'] = {
+Blockly.Blocks['pluie'] = {
   // Numeric input.
   init: function() {
-    this.appendDummyInput('sun')
-      .appendField(new Blockly.FieldImage("../media/words/rain.png", 30, 30, "*"))
+    this.appendDummyInput('pluie')
+      .appendField(new Blockly.FieldImage("../media/words/pluie.png", 30, 30, "*"))
     //this.setPreviousStatement(true, 'Field');
     this.setOutput(true, 'score');
     this.setNextStatement(false, 'Field');
@@ -94,11 +94,27 @@ Blockly.Blocks['rain'] = {
   }
 };
 
-Blockly.Blocks['thunder'] = {
+Blockly.Blocks['eclair'] = {
   // Numeric input.
   init: function() {
-    this.appendDummyInput('sun')
-      .appendField(new Blockly.FieldImage("../media/words/thunder.png", 30, 30, "*"))
+    this.appendDummyInput('eclair')
+      .appendField(new Blockly.FieldImage("../media/words/eclair.png", 30, 30, "*"))
+    //this.setPreviousStatement(true, 'Field');
+    this.setOutput(true, 'score');
+    this.setNextStatement(false, 'Field');
+    this.setColour(160);
+    this.setTooltip('This is a score');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['draw'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('draw')
+      .appendField(new Blockly.FieldImage("../media/words/eclair.png", 30, 30, "*"))
     //this.setPreviousStatement(true, 'Field');
     this.setOutput(true, 'score');
     this.setNextStatement(false, 'Field');
