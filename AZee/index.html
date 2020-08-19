@@ -43,6 +43,8 @@
 
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
     <category name="Az-ops" colour="70">
+        <block type="container"></block>
+        <block type="info-about"></block>
         <block type="each-of"></block>
         <block type="nicht-sondern"></block>
     </category>
@@ -52,7 +54,7 @@
         <block type="pluie"></block>
         <block type="eclair"></block>
     </category>
-    <category name="Blockly" colour="20">
+    <category name="Blockly" colour="30">
         <block type="text"></block>
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
@@ -63,8 +65,11 @@
         <block type="math_arithmetic"></block>
         <block type="text_print"></block>
     </category>
+    <category name="Réutilisables" colour="225" custom="VARIABLE">
+        <button text="Créer un mot réutilisable" callbackKey="createVariable"></button>
     </category>
-    <category name="Save/Restore" colour="50">
+    </category>
+    <category name="Save/Restore" colour="340">
         <button text="Sauvegarder" callbackKey="saveWorkspace"></button>
         <button text="Restaurer" callbackKey="loadWorkspace"></button>
     </category>
@@ -121,6 +126,11 @@
       xmlDom = Blockly.Xml.textToDom(xmlText);
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xmlDom);
     }
+  });
+
+  //la fonction pour créer des variables.
+  workspace.registerButtonCallback("createVariable",function(createButton) {
+    Blockly.Variables.createVariableButtonHandler(button.getTargetWorkspace(), null, 'mot')
   });
 </script>
 
