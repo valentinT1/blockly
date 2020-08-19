@@ -321,6 +321,92 @@ Blockly.Blocks['cam-switch'] = {
   }
 };
 
+Blockly.Blocks['sign-supported-spoken'] = {
+  init: function() {
+    var childCount = 0;
+
+    this.appendStatementInput('VALUE0')
+      .appendField('position');
+      this.appendStatementInput('VALUE1')
+      .appendField('looking at');
+    this.appendStatementInput('VALUE3')
+      .appendField('sig');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setColour(colorAzops);
+    this.setTooltip('Permet de regrouper plusieurs mots');
+
+    this.setOnChange(function(event) {
+      console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
+      if (Blockly.Events.UI === event.type) {
+        if (this.childBlocks_.length - childCount > 0) {
+          this.appendStatementInput('VALUE' + (childCount + 1));
+        }
+        else if (this.childBlocks_.length - childCount < 0) {
+          this.removeInput('VALUE' + (childCount));
+        }
+      }
+      childCount = this.childBlocks_.length;
+    });
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['intensity'] = {
+  init: function() {
+
+    this.appendStatementInput('VALUE0')
+      .appendField(new Blockly.FieldImage("../media/azops_images/plus.png", 20, 20, "*"));
+    this.appendDummyInput('')
+      .appendField('intensity');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setColour(colorAzops);
+    this.setTooltip('Returns a score');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['turn-taking'] = {
+  init: function() {
+
+    this.appendDummyInput('')
+      .appendField(new Blockly.FieldImage("../media/azops_images/left_par.png", 70, 20, "*"));
+    this.appendStatementInput('VALUE0')
+      .appendField('turn-taking');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setColour(colorAzops);
+    this.setTooltip('Returns a score');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['simultaneous'] = {
+  init: function() {
+
+    this.appendStatementInput('VALUE0')
+      .appendField('sig1');
+    this.appendDummyInput('')
+      .appendField(new Blockly.FieldImage("../media/azops_images/double_slash.png", 70, 20, "*"));
+    this.appendStatementInput('VALUE1')
+      .appendField('sig2');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setColour(colorAzops);
+    this.setTooltip('Returns a score');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
 //MOTS
 Blockly.Blocks['textAzee'] = {
   // Numeric input.
