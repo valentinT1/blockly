@@ -62,7 +62,7 @@ Blockly.Blocks['category'] = {
     this.appendStatementInput('VALUE0')
       .appendField('category');
     this.appendDummyInput('down_arrow')
-      .appendField(new Blockly.FieldImage("../media/azops_images/down_arrow.png", 20, 20, "*"))
+      .appendField('\u{2B07}');
     this.appendStatementInput('VALUE1')
       .appendField('focus');
     this.setNextStatement(true);
@@ -117,7 +117,7 @@ Blockly.Blocks['seq-res'] = {
     this.appendStatementInput('VALUE0')
       .appendField('condition');
     this.appendDummyInput('right arrow')
-      .appendField(new Blockly.FieldImage("../media/azops_images/right_arrow.png", 20, 20, "*"))
+      .appendField('\u{27A1}');
     this.appendStatementInput('VALUE1')
       .appendField('résultat');
     this.setNextStatement(true);
@@ -281,7 +281,7 @@ Blockly.Blocks['inter-subjectivity'] = {
     this.appendStatementInput('VALUE0')
       .appendField('vrai');
     this.appendDummyInput('right arrow')
-      .appendField(new Blockly.FieldImage("../media/azops_images/check.png", 20, 20, "*"))
+      .appendField('\u{2714}');
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
@@ -358,7 +358,7 @@ Blockly.Blocks['intensity'] = {
   init: function() {
 
     this.appendStatementInput('VALUE0')
-      .appendField(new Blockly.FieldImage("../media/azops_images/plus.png", 20, 20, "*"));
+      .appendField('\u{2795}\u{2795}');
     this.appendDummyInput('')
       .appendField('intensity');
     this.setNextStatement(true);
@@ -401,116 +401,6 @@ Blockly.Blocks['simultaneous'] = {
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
     this.setTooltip('Returns a score');
-  },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
-
-//MOTS
-Blockly.Blocks['textAzee'] = {
-  // Numeric input.
-  init: function() {
-    this.appendDummyInput('mot')
-      .appendField("mot")
-      .appendField(new Blockly.FieldTextInput('\'\''),
-        'FIELDNAME');
-
-    this.setPreviousStatement(true);
-    this.setNextStatement(false, 'Field');
-    this.setColour(colorMots);
-    this.setTooltip('This is a score');
-  },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
-
-Blockly.Blocks['sigma'] = {
-  // Numeric input.
-  init: function() {
-    this.appendDummyInput('sigma')
-      .appendField(new Blockly.FieldImage("../media/words/sigma.png", 30, 30, "*"))
-    this.setPreviousStatement(true);
-    this.setNextStatement(false, 'Field');
-    this.setColour(colorMots);
-    this.setTooltip('This is a score');
-  },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
-
-Blockly.Blocks['soleil'] = {
-  // Numeric input.
-  init: function() {
-    this.appendDummyInput('soleil')
-      .appendField(new Blockly.FieldImage("../media/words/soleil.png", 30, 30, "*"))
-    this.setPreviousStatement(true);
-    this.setNextStatement(false, 'Field');
-    this.setColour(colorMots);
-    this.setTooltip('This is a score');
-  },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
-
-Blockly.Blocks['nuage'] = {
-  // Numeric input.
-  init: function() {
-    this.appendDummyInput('nuage')
-      .appendField(new Blockly.FieldImage("../media/words/nuage.png", 30, 30, "*"))
-    this.setPreviousStatement(true);
-    this.setNextStatement(false, 'Field');
-    this.setColour(colorMots);
-    this.setTooltip('This is a score');
-  },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
-
-Blockly.Blocks['pluie'] = {
-  // Numeric input.
-  init: function() {
-    this.appendDummyInput('pluie')
-      .appendField(new Blockly.FieldImage("../media/words/pluie.png", 30, 30, "*"))
-    this.setPreviousStatement(true);
-    this.setNextStatement(false, 'Field');
-    this.setColour(colorMots);
-    this.setTooltip('This is a score');
-  },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
-
-Blockly.Blocks['eclair'] = {
-  // Numeric input.
-  init: function() {
-    this.appendDummyInput('eclair')
-      .appendField(new Blockly.FieldImage("../media/words/eclair.png", 30, 30, "*"))
-    this.setPreviousStatement(true);
-    this.setNextStatement(false, 'Field');
-    this.setColour(colorMots);
-    this.setTooltip('This is a score');
-  },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
-
-Blockly.Blocks['draw'] = {
-  // Numeric input.
-  init: function() {
-    this.appendDummyInput('draw')
-      .appendField(new Blockly.FieldImage("../media/words/eclair.png", 30, 30, "*"))
-    //this.setPreviousStatement(true, 'Field');
-    this.setOutput(true, 'score');
-    this.setNextStatement(false, 'Field');
-    this.setColour(160);
-    this.setTooltip('This is a score');
   },
   onchange: function() {
     fieldNameCheck(this);
