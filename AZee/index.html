@@ -10,7 +10,7 @@
     <script src ="./filesaver/FileSaver.js"></script>
     <style>
         html, body {
-            height: 100%;
+            height: 92%;
             margin: 0;
         }
         body {
@@ -45,15 +45,37 @@
     <category name="Az-ops" colour="70">
         <block type="container"></block>
         <block type="info-about"></block>
-        <block type="each-of"></block>
+        <block type="add-side-info"></block>
+        <block type="category"></block>
         <block type="nicht-sondern"></block>
+        <block type="context-ssp"></block>
+        <block type="seq-res"></block>
+        <block type="each-of"></block>
+        <block type="all-of"></block>
+        <block type="mutex-list"></block>
+        <block type="open-list-non-mutex"></block>
+        <block type="time-seq"></block>
+        <block type="inter-subjectivity"></block>
+        <block type="cam-switch"></block>
     </category>
     <category name="Mots" colour="190">
+        <block type="textAzee"></block>
+        <block type="sigma"></block>
         <block type="soleil"></block>
         <block type="nuage"></block>
         <block type="pluie"></block>
         <block type="eclair"></block>
     </category>
+    <sep></sep>
+    <category name="Réutilisables" colour="225" custom="VARIABLE">
+        <button text="Créer un mot réutilisable" callbackKey="createVariable"></button>
+    </category>
+    </category>
+    <category name="Save/Restore" colour="340">
+        <button text="Sauvegarder" callbackKey="saveWorkspace"></button>
+        <button text="Restaurer" callbackKey="loadWorkspace"></button>
+    </category>
+    <sep></sep>
     <category name="Blockly" colour="30">
         <block type="text"></block>
         <block type="controls_if"></block>
@@ -64,14 +86,6 @@
         </block>
         <block type="math_arithmetic"></block>
         <block type="text_print"></block>
-    </category>
-    <category name="Réutilisables" colour="225" custom="VARIABLE">
-        <button text="Créer un mot réutilisable" callbackKey="createVariable"></button>
-    </category>
-    </category>
-    <category name="Save/Restore" colour="340">
-        <button text="Sauvegarder" callbackKey="saveWorkspace"></button>
-        <button text="Restaurer" callbackKey="loadWorkspace"></button>
     </category>
 
 
