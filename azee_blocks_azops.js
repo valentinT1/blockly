@@ -6,16 +6,26 @@ Blockly.Blocks['container'] = {
   init: function() {
 
     this.appendStatementInput('Container')
-      .appendField('container');
+      .appendField('bout d\'histoire');
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
     this.setTooltip('Returns a score');
-    //this.setHelpUrl('http://www.w3schools.com/jsref/jsref_length_string.asp');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
+};
+
+Blockly.Blocks['opposition'] = {
+  init: function() {
+
+    this.appendStatementInput('VALUE0')
+    this.appendDummyInput('opp')
+      .appendField(new Blockly.FieldImage("../media/azops_images/opposition.png", 20, 20, "*"))
+    this.appendStatementInput('VALUE1')
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setColour(colorAzops);
+    this.setTooltip('add side info');
+  },
 };
 
 //AZOPS
@@ -33,9 +43,6 @@ Blockly.Blocks['info-about'] = {
     this.setColour(colorAzops);
     this.setTooltip('info about');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['add-side-info'] = {
@@ -50,9 +57,6 @@ Blockly.Blocks['add-side-info'] = {
     this.setColour(colorAzops);
     this.setTooltip('add side info');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['category'] = {
@@ -69,9 +73,6 @@ Blockly.Blocks['category'] = {
     this.setColour(colorAzops);
     this.setTooltip('category');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['nicht-sondern'] = {
@@ -86,9 +87,6 @@ Blockly.Blocks['nicht-sondern'] = {
     this.setColour(colorAzops);
     this.setTooltip('nicht sondern');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['context-ssp'] = {
@@ -105,9 +103,6 @@ Blockly.Blocks['context-ssp'] = {
     this.setColour(colorAzops);
     this.setTooltip('context event');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['seq-res'] = {
@@ -124,9 +119,6 @@ Blockly.Blocks['seq-res'] = {
     this.setColour(colorAzops);
     this.setTooltip('condition implique résultat');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['each-of'] = {
@@ -153,9 +145,6 @@ Blockly.Blocks['each-of'] = {
       childCount = this.childBlocks_.length;
     });
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['all-of'] = {
@@ -182,9 +171,6 @@ Blockly.Blocks['all-of'] = {
       childCount = this.childBlocks_.length;
     });
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['mutex-list'] = {
@@ -211,9 +197,6 @@ Blockly.Blocks['mutex-list'] = {
       childCount = this.childBlocks_.length;
     });
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['open-list-non-mutex'] = {
@@ -240,9 +223,6 @@ Blockly.Blocks['open-list-non-mutex'] = {
       childCount = this.childBlocks_.length;
     });
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['time-seq'] = {
@@ -269,9 +249,6 @@ Blockly.Blocks['time-seq'] = {
       childCount = this.childBlocks_.length;
     });
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['inter-subjectivity'] = {
@@ -286,9 +263,6 @@ Blockly.Blocks['inter-subjectivity'] = {
     this.setColour(colorAzops);
     this.setTooltip('subjective attribute');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['cam-switch'] = {
@@ -315,9 +289,6 @@ Blockly.Blocks['cam-switch'] = {
       childCount = this.childBlocks_.length;
     });
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['turn-taking'] = {
@@ -335,9 +306,6 @@ Blockly.Blocks['turn-taking'] = {
     this.setColour(colorAzops);
     this.setTooltip('turn-taking');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['intensity'] = {
@@ -352,9 +320,6 @@ Blockly.Blocks['intensity'] = {
     this.setColour(colorAzops);
     this.setTooltip('intensité');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['turn-taking-free'] = {
@@ -382,9 +347,6 @@ Blockly.Blocks['turn-taking-free'] = {
       childCount = this.childBlocks_.length;
     });
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['sign-supported-spoken'] = {
@@ -410,10 +372,6 @@ Blockly.Blocks['sign-supported-spoken'] = {
       childCount = this.childBlocks_.length;
     });
   },
-
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
 
 Blockly.Blocks['simultaneous'] = {
@@ -430,7 +388,4 @@ Blockly.Blocks['simultaneous'] = {
     this.setColour(colorAzops);
     this.setTooltip('simultanéité');
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
 };
