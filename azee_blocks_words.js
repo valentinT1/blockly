@@ -336,6 +336,66 @@ Blockly.Blocks['noir'] = {
   }
 };
 
+Blockly.Blocks['chauve-souris'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('chauve-souris')
+      .appendField('\u{1F987}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('chauve-souris');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['chat'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('chat')
+      .appendField('\u{1F408}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('chat');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['grenouille'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('grenouille')
+      .appendField('\u{1F438}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('grenouille');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['méchant'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('méchant')
+      .appendField('\u{1F608}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('méchant');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
 //this is not even close to work
 Blockly.Blocks['draw'] = {
   // Numeric input.
