@@ -7,6 +7,7 @@
     <script src="../blocks_compressed.js"></script>
     <script src="../azee_blocks_azops.js"></script>
     <script src="../azee_blocks_words.js"></script>
+    <script src="../azee_blocks_verbs.js"></script>
     <script src="../msg/js/en.js"></script>
     <script src ="./filesaver/FileSaver.js"></script>
 
@@ -62,17 +63,49 @@
         <block type="sign-supported-spoken"></block>
         <block type="intensity"></block>
         <block type="turn-taking"></block>
+        <block type="turn-taking-free"></block>
         <block type="simultaneous"></block>
     </category>
     <category name="Mots" colour="190">
         <block type="textAzee"></block>
         <block type="sigma"></block>
-        <block type="soleil"></block>
-        <block type="nuage"></block>
-        <block type="pluie"></block>
-        <block type="eclair"></block>
-        <block type="chien"></block>
-        <block type="gentil"></block>
+        <category name="personnes">
+            <block type="vieil homme"></block>
+            <block type="vieille femme"></block>
+            <block type="homme"></block>
+            <block type="femme"></block>
+            <block type="pere et fils"></block>
+        </category>
+        <category name="météo">
+            <block type="soleil"></block>
+            <block type="nuage"></block>
+            <block type="pluie"></block>
+            <block type="eclair"></block>
+        </category>
+        <category name="animaux">
+            <block type="chien"></block>
+            <block type="renard"></block>
+        </category>
+        <category name="couleurs">
+            <block type="rouge"></block>
+            <block type="vert"></block>
+            <block type="bleu"></block>
+            <block type="noir"></block>
+            <block type="brun"></block>
+        </category>
+        <category name="adjectifs">
+            <block type="gentil"></block>
+            <block type="rapide"></block>
+            <block type="paresseux"></block>
+        </category>
+        <category name="action">
+            <block type="combat"></block>
+        </category>
+    </category>
+    <category name="Verbes" colour="130">
+        <block type="dormir"></block>
+        <block type="crier"></block>
+        <block type="parler"></block>
     </category>
     <sep></sep>
     <category name="Réutilisables" colour="225" custom="VARIABLE">

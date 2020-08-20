@@ -1,4 +1,4 @@
-//Contains AZops blocks
+//Contains Words blocks
 
 var colorMots = 190;
 
@@ -7,14 +7,14 @@ Blockly.Blocks['textAzee'] = {
   // Numeric input.
   init: function() {
     this.appendDummyInput('mot')
-      .appendField("mot")
-      .appendField(new Blockly.FieldTextInput('\'\''),
+      .appendField("")
+      .appendField(new Blockly.FieldTextInput(''),
         'FIELDNAME');
 
     this.setPreviousStatement(true);
     this.setNextStatement(false, 'Field');
     this.setColour(colorMots);
-    this.setTooltip('This is a score');
+    this.setTooltip('mot perso');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -29,7 +29,7 @@ Blockly.Blocks['sigma'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(false, 'Field');
     this.setColour(colorMots);
-    this.setTooltip('This is a score');
+    this.setTooltip('je');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -44,7 +44,7 @@ Blockly.Blocks['soleil'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(false, 'Field');
     this.setColour(colorMots);
-    this.setTooltip('This is a score');
+    this.setTooltip('soleil');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -59,7 +59,7 @@ Blockly.Blocks['nuage'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(false, 'Field');
     this.setColour(colorMots);
-    this.setTooltip('This is a score');
+    this.setTooltip('nuage');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -74,7 +74,7 @@ Blockly.Blocks['pluie'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(false, 'Field');
     this.setColour(colorMots);
-    this.setTooltip('This is a score');
+    this.setTooltip('pluie');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -89,7 +89,7 @@ Blockly.Blocks['eclair'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(false, 'Field');
     this.setColour(colorMots);
-    this.setTooltip('This is a score');
+    this.setTooltip('eclair');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -104,7 +104,7 @@ Blockly.Blocks['chien'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(false, 'Field');
     this.setColour(colorMots);
-    this.setTooltip('This is a score');
+    this.setTooltip('chien');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -119,7 +119,217 @@ Blockly.Blocks['gentil'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(false, 'Field');
     this.setColour(colorMots);
-    this.setTooltip('This is a score');
+    this.setTooltip('gentil');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['renard'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('renard')
+      .appendField('\u{1F98A}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('renard');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['rapide'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('rapide')
+      .appendField('\u{26A1}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('rapide');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['brun'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('brun')
+      .appendField('\u{1F7E4}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('brun');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['paresseux'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('paresseux')
+      .appendField('\u{1F634}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('paresseux');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['vieil homme'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('vieil homme')
+      .appendField('\u{1F474}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('vieil homme');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['vieille femme'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('vieille femme')
+      .appendField('\u{1F475}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('vieille femme');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['homme'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('homme')
+      .appendField('\u{1F468}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('homme');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['femme'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('femme')
+      .appendField('\u{1F469}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('femme');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['pere et fils'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('pere et fils')
+      .appendField('\u{1F468}\u{1F466}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('pere et fils');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['combat'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('combat')
+      .appendField('\u{2694}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('combat');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['rouge'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('rouge')
+      .appendField('\u{1F534}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('rouge');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['bleu'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('bleu')
+      .appendField('\u{1F535}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('bleu');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['vert'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('vert')
+      .appendField('\u{1F7E2}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('vert');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['noir'] = {
+  // Numeric input.
+  init: function() {
+    this.appendDummyInput('noir')
+      .appendField('\u{26AB}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorMots);
+    this.setTooltip('noir');
   },
   onchange: function() {
     fieldNameCheck(this);

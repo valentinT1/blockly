@@ -1,7 +1,6 @@
 //Contains AZops blocks
 
 var colorAzops = 70;
-var colorMots = 190;
 
 Blockly.Blocks['container'] = {
   init: function() {
@@ -32,7 +31,7 @@ Blockly.Blocks['info-about'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
+    this.setTooltip('info about');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -49,7 +48,7 @@ Blockly.Blocks['add-side-info'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
+    this.setTooltip('add side info');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -68,7 +67,7 @@ Blockly.Blocks['category'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
+    this.setTooltip('category');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -85,7 +84,7 @@ Blockly.Blocks['nicht-sondern'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
+    this.setTooltip('nicht sondern');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -104,7 +103,7 @@ Blockly.Blocks['context-ssp'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
+    this.setTooltip('context event');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -123,7 +122,7 @@ Blockly.Blocks['seq-res'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
+    this.setTooltip('condition implique résultat');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -139,7 +138,7 @@ Blockly.Blocks['each-of'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Permet de regrouper plusieurs mots');
+    this.setTooltip('chacun');
 
     this.setOnChange(function(event) {
       console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
@@ -168,7 +167,7 @@ Blockly.Blocks['all-of'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Permet de regrouper plusieurs mots');
+    this.setTooltip('tous');
 
     this.setOnChange(function(event) {
       console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
@@ -197,7 +196,7 @@ Blockly.Blocks['mutex-list'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Permet de regrouper plusieurs mots');
+    this.setTooltip('mutually exclusive');
 
     this.setOnChange(function(event) {
       console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
@@ -226,7 +225,7 @@ Blockly.Blocks['open-list-non-mutex'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Permet de regrouper plusieurs mots');
+    this.setTooltip('not complete list of not mutually exclusive');
 
     this.setOnChange(function(event) {
       console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
@@ -255,7 +254,7 @@ Blockly.Blocks['time-seq'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Permet de regrouper plusieurs mots');
+    this.setTooltip('time sequence');
 
     this.setOnChange(function(event) {
       console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
@@ -285,7 +284,7 @@ Blockly.Blocks['inter-subjectivity'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
+    this.setTooltip('subjective attribute');
   },
   onchange: function() {
     fieldNameCheck(this);
@@ -301,7 +300,74 @@ Blockly.Blocks['cam-switch'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Permet de regrouper plusieurs mots');
+    this.setTooltip('cam switch');
+
+    this.setOnChange(function(event) {
+      console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
+      if (Blockly.Events.UI === event.type) {
+        if (this.childBlocks_.length - childCount > 0) {
+          this.appendStatementInput('VALUE' + (childCount + 1));
+        }
+        else if (this.childBlocks_.length - childCount < 0) {
+          this.removeInput('VALUE' + (childCount));
+        }
+      }
+      childCount = this.childBlocks_.length;
+    });
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['turn-taking'] = {
+  init: function() {
+    var childCount = 0;
+
+    this.appendStatementInput('VALUE0')
+      .appendField('position');
+      this.appendStatementInput('VALUE1')
+      .appendField('looking at');
+    this.appendStatementInput('VALUE3')
+      .appendField('sig');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setColour(colorAzops);
+    this.setTooltip('turn-taking');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['intensity'] = {
+  init: function() {
+
+    this.appendStatementInput('VALUE0')
+      .appendField('\u{2795}\u{2795}');
+    this.appendDummyInput('')
+      .appendField('intensity');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setColour(colorAzops);
+    this.setTooltip('intensité');
+  },
+  onchange: function() {
+    fieldNameCheck(this);
+  }
+};
+
+Blockly.Blocks['turn-taking-free'] = {
+  init: function() {
+
+    this.appendDummyInput('')
+      .appendField(new Blockly.FieldImage("../media/azops_images/left_par.png", 70, 20, "*"));
+    this.appendStatementInput('VALUE0')
+      .appendField('turn-taking');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setColour(colorAzops);
+    this.setTooltip('turn taking');
 
     this.setOnChange(function(event) {
       console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
@@ -323,18 +389,13 @@ Blockly.Blocks['cam-switch'] = {
 
 Blockly.Blocks['sign-supported-spoken'] = {
   init: function() {
-    var childCount = 0;
 
     this.appendStatementInput('VALUE0')
-      .appendField('position');
-      this.appendStatementInput('VALUE1')
-      .appendField('looking at');
-    this.appendStatementInput('VALUE3')
-      .appendField('sig');
+      .appendField('sign supported spoken');
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Permet de regrouper plusieurs mots');
+    this.setTooltip('sign-supported-spoken');
 
     this.setOnChange(function(event) {
       console.log("event type: " + event.type + " childcount: " + this.childBlocks_.length);
@@ -349,40 +410,7 @@ Blockly.Blocks['sign-supported-spoken'] = {
       childCount = this.childBlocks_.length;
     });
   },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
 
-Blockly.Blocks['intensity'] = {
-  init: function() {
-
-    this.appendStatementInput('VALUE0')
-      .appendField('\u{2795}\u{2795}');
-    this.appendDummyInput('')
-      .appendField('intensity');
-    this.setNextStatement(true);
-    this.setPreviousStatement(true);
-    this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
-  },
-  onchange: function() {
-    fieldNameCheck(this);
-  }
-};
-
-Blockly.Blocks['turn-taking'] = {
-  init: function() {
-
-    this.appendDummyInput('')
-      .appendField(new Blockly.FieldImage("../media/azops_images/left_par.png", 70, 20, "*"));
-    this.appendStatementInput('VALUE0')
-      .appendField('turn-taking');
-    this.setNextStatement(true);
-    this.setPreviousStatement(true);
-    this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
-  },
   onchange: function() {
     fieldNameCheck(this);
   }
@@ -400,7 +428,7 @@ Blockly.Blocks['simultaneous'] = {
     this.setNextStatement(true);
     this.setPreviousStatement(true);
     this.setColour(colorAzops);
-    this.setTooltip('Returns a score');
+    this.setTooltip('simultanéité');
   },
   onchange: function() {
     fieldNameCheck(this);
