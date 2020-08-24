@@ -37,3 +37,14 @@ Blockly.Blocks['parler'] = {
   },
 };
 
+Blockly.Blocks['combattre'] = {
+  init: function() {
+    this.appendDummyInput('combattre')
+      .appendField('\u{2694}');
+    this.setPreviousStatement(true);
+    this.setNextStatement(false, 'Field');
+    this.setColour(colorVerbes);
+    this.setTooltip('combattre');
+  },
+};
+

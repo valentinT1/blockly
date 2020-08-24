@@ -193,17 +193,6 @@ Blockly.Blocks['famille'] = {
   },
 };
 
-Blockly.Blocks['combat'] = {
-  init: function() {
-    this.appendDummyInput('combat')
-      .appendField('\u{2694}');
-    this.setPreviousStatement(true);
-    this.setNextStatement(false, 'Field');
-    this.setColour(colorMots);
-    this.setTooltip('combat');
-  },
-};
-
 Blockly.Blocks['rouge'] = {
   init: function() {
     this.appendDummyInput('rouge')
