@@ -1,6 +1,6 @@
 //Contains AZops blocks
 
-var colorAzops = 70;
+var colorAzops = 50;
 
 Blockly.Blocks['container'] = {
   init: function() {
